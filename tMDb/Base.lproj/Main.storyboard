@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,6 +50,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Discover" id="cQM-YH-bgV"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Qbq-no-oey" id="FSJ-Yf-D3Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

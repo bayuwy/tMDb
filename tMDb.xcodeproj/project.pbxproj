@@ -18,6 +18,8 @@
 		A9C567FA1E714BD80025739F /* tMDbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C567F91E714BD80025739F /* tMDbUITests.swift */; };
 		A9C568081E714FC20025739F /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C568071E714FC20025739F /* DiscoverViewController.swift */; };
 		A9C5680D1E71511C0025739F /* tMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C5680C1E71511C0025739F /* tMDb.swift */; };
+		A9C5680F1E715BB40025739F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C5680E1E715BB40025739F /* Movie.swift */; };
+		A9C568111E715BF00025739F /* DiscoverResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C568101E715BF00025739F /* DiscoverResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		A9C567FB1E714BD80025739F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9C568071E714FC20025739F /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		A9C5680C1E71511C0025739F /* tMDb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tMDb.swift; sourceTree = "<group>"; };
+		A9C5680E1E715BB40025739F /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		A9C568101E715BF00025739F /* DiscoverResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverResponse.swift; sourceTree = "<group>"; };
 		C8520DBD5D3D896C6430E59F /* Pods-tMDbTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tMDbTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tMDbTests/Pods-tMDbTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CAC4D409076DF2C612122F11 /* Pods-tMDb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tMDb.release.xcconfig"; path = "Pods/Target Support Files/Pods-tMDb/Pods-tMDb.release.xcconfig"; sourceTree = "<group>"; };
 		D839D413919B82C45C132734 /* Pods-tMDbTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tMDbTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tMDbTests/Pods-tMDbTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				A9C5680C1E71511C0025739F /* tMDb.swift */,
+				A9C5680E1E715BB40025739F /* Movie.swift */,
+				A9C568101E715BF00025739F /* DiscoverResponse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -461,7 +467,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9C5680D1E71511C0025739F /* tMDb.swift in Sources */,
+				A9C568111E715BF00025739F /* DiscoverResponse.swift in Sources */,
 				A9C568081E714FC20025739F /* DiscoverViewController.swift in Sources */,
+				A9C5680F1E715BB40025739F /* Movie.swift in Sources */,
 				A9C567D71E714BD70025739F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

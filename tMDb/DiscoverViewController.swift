@@ -10,6 +10,11 @@ import UIKit
 
 class DiscoverViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var movies: [Movie] = []
+    var discoverResponse: DiscoverResponse?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +36,29 @@ class DiscoverViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func discoverMovie(at page: Int = 1) {
+        
+        provider.request(.discover(Date(), page))
+            .map(to: DiscoverResponse.self)
+            .subscribe { event in
+                switch event {
+                case .next(let response):
+                    self.discoverResponse = response
+                    if page == 1 {
+                        self.movies = response.results
+                    }
+                    else {
+                        self.movies += response.results
+                    }
+                    
+                case .error(let error):
+                    print(error.localizedDescription)
+                    
+                case .completed:
+                    break
+                }
+            }
+            .disposed(by: disposeBag)
+    }
 }
