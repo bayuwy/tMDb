@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0EC662D2C2106D4E6D694AADD1852504"
-               BuildableName = "Pods_tMDb.framework"
-               BlueprintName = "Pods-tMDb"
+               BlueprintIdentifier = "8B8BE106A3CC8F499A897D876C4053D7"
+               BuildableName = "UIScrollView_InfiniteScroll.framework"
+               BlueprintName = "UIScrollView-InfiniteScroll"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0EC662D2C2106D4E6D694AADD1852504"
-            BuildableName = "Pods_tMDb.framework"
-            BlueprintName = "Pods-tMDb"
+            BlueprintIdentifier = "8B8BE106A3CC8F499A897D876C4053D7"
+            BuildableName = "UIScrollView_InfiniteScroll.framework"
+            BlueprintName = "UIScrollView-InfiniteScroll"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

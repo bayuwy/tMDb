@@ -26,9 +26,29 @@ class Movie: EVObject {
     var video: Bool = false
     var voteAverage: Double = 0.0
     
+    var belongsToCollection: String?
+    var budget: Int64 = 0
+    var genres: [Genre] = []
+    var homepage: String?
+    var imdbId: String?
+    var productionCompanies: [Company] = []
+    var productionCountries: [Country] = []
+    var revenue: Int64 = 0
+    var runtime: Int = 0
+    var spokenLanguages: [Language] = []
+    var status: String?
+    var tagline: String?
+    
     var posterUrl: String? {
         if let posterPath = posterPath {
             return "\(posterBaseUrl)\(posterPath)"
+        }
+        return nil
+    }
+    
+    var backdropUrl: String? {
+        if let backdropPath = backdropPath {
+            return "\(posterBaseUrl)\(backdropPath)"
         }
         return nil
     }

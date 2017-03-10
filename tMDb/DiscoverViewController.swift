@@ -8,10 +8,18 @@
 
 import UIKit
 import Kingfisher
+import UIScrollView_InfiniteScroll
 
 class DiscoverViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        self.collectionView.addSubview(refreshControl)
+        
+        return refreshControl
+    }()
     
     var movies: [Movie] = []
     var discoverResponse: DiscoverResponse?
@@ -21,7 +29,18 @@ class DiscoverViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         collectionView.register(UINib(nibName: "MovieViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCellId")
+        collectionView.addInfiniteScroll { (collectionView) in
+            if let page = self.discoverResponse?.page {
+                let nextPage = page + 1
+                self.discoverMovie(at: nextPage)
+            }
+        }
+        collectionView.setShouldShowInfiniteScrollHandler { (collectionView) -> Bool in
+            return self.discoverResponse != nil && !self.refreshControl.isRefreshing
+        }
+        refreshControl.addTarget(self, action: #selector(DiscoverViewController.refresh(sender:)), for: .valueChanged)
         
+        refreshControl.beginRefreshing()
         discoverMovie()
     }
 
@@ -41,6 +60,12 @@ class DiscoverViewController: UIViewController {
     }
     */
     
+    // MARK: - Helpers
+    
+    func refresh(sender: UIRefreshControl) {
+        discoverMovie()
+    }
+    
     func discoverMovie(at page: Int = 1) {
         
         provider.request(.discover(Date(), page))
@@ -58,9 +83,13 @@ class DiscoverViewController: UIViewController {
                     
                 case .error(let error):
                     print(error.localizedDescription)
+                    self.refreshControl.endRefreshing()
+                    self.collectionView.finishInfiniteScroll()
                     
                 case .completed:
                     self.collectionView.reloadData()
+                    self.refreshControl.endRefreshing()
+                    self.collectionView.finishInfiniteScroll()
                 }
             }
             .disposed(by: disposeBag)
@@ -123,6 +152,8 @@ extension DiscoverViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let movie = movies[indexPath.item]
+        showMovieDetail(withMovieID: movie.id)
     }
 }
 

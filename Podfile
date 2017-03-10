@@ -8,6 +8,7 @@ target 'tMDb' do
   # Pods for tMDb  
   pod 'EVReflection/MoyaRxSwift'
   pod 'Kingfisher', '~> 3.0'
+  pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
 
   target 'tMDbTests' do
     inherit! :search_paths

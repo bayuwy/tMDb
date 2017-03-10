@@ -21,10 +21,12 @@ PODS:
     - RxSwift (~> 3.0)
   - Result (3.2.1)
   - RxSwift (3.2.0)
+  - UIScrollView-InfiniteScroll (1.0.0)
 
 DEPENDENCIES:
   - EVReflection/MoyaRxSwift
   - Kingfisher (~> 3.0)
+  - UIScrollView-InfiniteScroll (~> 1.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -33,7 +35,8 @@ SPEC CHECKSUMS:
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  UIScrollView-InfiniteScroll: d26885be71caca7485cdb37eab513a8f89036bb0
 
-PODFILE CHECKSUM: e87f33323c21c8307821329fb54606ca4c5e807a
+PODFILE CHECKSUM: 53dbfd819c9e82aec207325b867f00a78b9382df
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.0.1

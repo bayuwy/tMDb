@@ -22,6 +22,11 @@
 		A9C5680D1E71511C0025739F /* tMDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C5680C1E71511C0025739F /* tMDb.swift */; };
 		A9C5680F1E715BB40025739F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C5680E1E715BB40025739F /* Movie.swift */; };
 		A9C568111E715BF00025739F /* DiscoverResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C568101E715BF00025739F /* DiscoverResponse.swift */; };
+		A9F082D61E7234320024D931 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F082D51E7234320024D931 /* MovieDetailViewController.swift */; };
+		A9F082D81E7238C80024D931 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F082D71E7238C80024D931 /* Genre.swift */; };
+		A9F082DA1E7239070024D931 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F082D91E7239070024D931 /* Country.swift */; };
+		A9F082DC1E72393E0024D931 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F082DB1E72393E0024D931 /* Company.swift */; };
+		A9F082DE1E7239820024D931 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F082DD1E7239820024D931 /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,11 @@
 		A9C5680C1E71511C0025739F /* tMDb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tMDb.swift; sourceTree = "<group>"; };
 		A9C5680E1E715BB40025739F /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A9C568101E715BF00025739F /* DiscoverResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverResponse.swift; sourceTree = "<group>"; };
+		A9F082D51E7234320024D931 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		A9F082D71E7238C80024D931 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		A9F082D91E7239070024D931 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		A9F082DB1E72393E0024D931 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		A9F082DD1E7239820024D931 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		C8520DBD5D3D896C6430E59F /* Pods-tMDbTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tMDbTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tMDbTests/Pods-tMDbTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CAC4D409076DF2C612122F11 /* Pods-tMDb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tMDb.release.xcconfig"; path = "Pods/Target Support Files/Pods-tMDb/Pods-tMDb.release.xcconfig"; sourceTree = "<group>"; };
 		D839D413919B82C45C132734 /* Pods-tMDbTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tMDbTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tMDbTests/Pods-tMDbTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				A9C568071E714FC20025739F /* DiscoverViewController.swift */,
+				A9F082D51E7234320024D931 /* MovieDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -188,8 +199,12 @@
 			isa = PBXGroup;
 			children = (
 				A9C5680C1E71511C0025739F /* tMDb.swift */,
-				A9C5680E1E715BB40025739F /* Movie.swift */,
 				A9C568101E715BF00025739F /* DiscoverResponse.swift */,
+				A9C5680E1E715BB40025739F /* Movie.swift */,
+				A9F082D71E7238C80024D931 /* Genre.swift */,
+				A9F082DB1E72393E0024D931 /* Company.swift */,
+				A9F082D91E7239070024D931 /* Country.swift */,
+				A9F082DD1E7239820024D931 /* Language.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -404,7 +419,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D1E926ADA9CF122BD2CB8829 /* [CP] Check Pods Manifest.lock */ = {
@@ -419,7 +434,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D5A724D010AE066FAA2B23D9 /* [CP] Copy Pods Resources */ = {
@@ -479,7 +494,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -490,11 +505,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9C5680D1E71511C0025739F /* tMDb.swift in Sources */,
+				A9F082DA1E7239070024D931 /* Country.swift in Sources */,
 				A9C568111E715BF00025739F /* DiscoverResponse.swift in Sources */,
+				A9F082DC1E72393E0024D931 /* Company.swift in Sources */,
 				A9C568081E714FC20025739F /* DiscoverViewController.swift in Sources */,
 				A9C5680F1E715BB40025739F /* Movie.swift in Sources */,
+				A9F082D61E7234320024D931 /* MovieDetailViewController.swift in Sources */,
 				A9C567D71E714BD70025739F /* AppDelegate.swift in Sources */,
 				3A9144E51E7160F8005B1B6E /* MovieViewCell.swift in Sources */,
+				A9F082D81E7238C80024D931 /* Genre.swift in Sources */,
+				A9F082DE1E7239820024D931 /* Language.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
