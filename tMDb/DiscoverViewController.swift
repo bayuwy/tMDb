@@ -68,7 +68,7 @@ class DiscoverViewController: UIViewController {
     
     func discoverMovie(at page: Int = 1) {
         
-        provider.request(.discover(Date(), page))
+        provider.request(.discoverMovie(Date(), page))
             .map(to: DiscoverResponse.self)
             .subscribe { event in
                 switch event {

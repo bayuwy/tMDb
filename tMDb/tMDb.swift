@@ -18,7 +18,7 @@ let provider = RxMoyaProvider<tMDb>()
 let disposeBag = DisposeBag()
 
 enum tMDb {
-    case discover(Date, Int)
+    case discoverMovie(Date, Int)
     case movieDetail(Int)
 }
 
@@ -32,7 +32,7 @@ extension tMDb: TargetType {
     /// The path to be appended to `baseURL` to form the full `URL`.
     var path: String {
         switch self {
-        case .discover:
+        case .discoverMovie:
             return "/discover/movie"
             
         case .movieDetail(let movieID):
@@ -43,7 +43,7 @@ extension tMDb: TargetType {
     /// The HTTP method used in the request.
     var method: Moya.Method {
         switch self {
-        case .discover, .movieDetail:
+        case .discoverMovie, .movieDetail:
             return .get
         }
     }
@@ -53,7 +53,7 @@ extension tMDb: TargetType {
         var parameters: [String: Any] = ["api_key": tMDbApiKey]
         
         switch self {
-        case .discover(let date, let page):
+        case .discoverMovie(let date, let page):
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             parameters["primary_release_date.gte"] = dateFormatter.string(from: date)
@@ -69,23 +69,31 @@ extension tMDb: TargetType {
     /// The method used for parameter encoding.
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .discover, .movieDetail:
+        case .discoverMovie, .movieDetail:
             return URLEncoding.default
         }
     }
     
     /// Provides stub data for use in testing.
     var sampleData: Data {
+        var path: String!
+        
         switch self {
-        case .discover, .movieDetail:
-            return "".data(using: .utf8)!
+        case .discoverMovie:
+            path = Bundle.main.path(forResource: "DiscoverMovie", ofType: "json")!
+            
+        case .movieDetail:
+            path = Bundle.main.path(forResource: "MovieDetail", ofType: "json")!
         }
+        
+        let stringJson = try! String(contentsOfFile: path)
+        return stringJson.data(using: .utf8)!
     }
     
     /// The type of HTTP task to be performed.
     var task: Task {
         switch self {
-        case .discover, .movieDetail:
+        case .discoverMovie, .movieDetail:
             return .request
         }
     }

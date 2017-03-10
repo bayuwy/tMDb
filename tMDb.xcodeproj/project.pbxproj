@@ -27,6 +27,12 @@
 		A9F082DA1E7239070024D931 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F082D91E7239070024D931 /* Country.swift */; };
 		A9F082DC1E72393E0024D931 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F082DB1E72393E0024D931 /* Company.swift */; };
 		A9F082DE1E7239820024D931 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F082DD1E7239820024D931 /* Language.swift */; };
+		A9F082E31E7249F00024D931 /* DiscoverMovie.json in Resources */ = {isa = PBXBuildFile; fileRef = A9F082E11E7249F00024D931 /* DiscoverMovie.json */; };
+		A9F082E41E7249F00024D931 /* DiscoverMovie.json in Resources */ = {isa = PBXBuildFile; fileRef = A9F082E11E7249F00024D931 /* DiscoverMovie.json */; };
+		A9F082E51E7249F00024D931 /* DiscoverMovie.json in Resources */ = {isa = PBXBuildFile; fileRef = A9F082E11E7249F00024D931 /* DiscoverMovie.json */; };
+		A9F082E61E7249F00024D931 /* MovieDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = A9F082E21E7249F00024D931 /* MovieDetail.json */; };
+		A9F082E71E7249F00024D931 /* MovieDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = A9F082E21E7249F00024D931 /* MovieDetail.json */; };
+		A9F082E81E7249F00024D931 /* MovieDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = A9F082E21E7249F00024D931 /* MovieDetail.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +80,8 @@
 		A9F082D91E7239070024D931 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		A9F082DB1E72393E0024D931 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		A9F082DD1E7239820024D931 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		A9F082E11E7249F00024D931 /* DiscoverMovie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DiscoverMovie.json; sourceTree = "<group>"; };
+		A9F082E21E7249F00024D931 /* MovieDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MovieDetail.json; sourceTree = "<group>"; };
 		C8520DBD5D3D896C6430E59F /* Pods-tMDbTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tMDbTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tMDbTests/Pods-tMDbTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CAC4D409076DF2C612122F11 /* Pods-tMDb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tMDb.release.xcconfig"; path = "Pods/Target Support Files/Pods-tMDb/Pods-tMDb.release.xcconfig"; sourceTree = "<group>"; };
 		D839D413919B82C45C132734 /* Pods-tMDbTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tMDbTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tMDbTests/Pods-tMDbTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +163,8 @@
 				A9C567E01E714BD70025739F /* Assets.xcassets */,
 				A9C567E21E714BD70025739F /* LaunchScreen.storyboard */,
 				A9C567E51E714BD70025739F /* Info.plist */,
+				A9F082E11E7249F00024D931 /* DiscoverMovie.json */,
+				A9F082E21E7249F00024D931 /* MovieDetail.json */,
 			);
 			path = tMDb;
 			sourceTree = "<group>";
@@ -342,6 +352,8 @@
 				3A9144E61E7160F8005B1B6E /* MovieViewCell.xib in Resources */,
 				A9C567E11E714BD70025739F /* Assets.xcassets in Resources */,
 				A9C567DC1E714BD70025739F /* Main.storyboard in Resources */,
+				A9F082E31E7249F00024D931 /* DiscoverMovie.json in Resources */,
+				A9F082E61E7249F00024D931 /* MovieDetail.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +361,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F082E41E7249F00024D931 /* DiscoverMovie.json in Resources */,
+				A9F082E71E7249F00024D931 /* MovieDetail.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +370,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F082E51E7249F00024D931 /* DiscoverMovie.json in Resources */,
+				A9F082E81E7249F00024D931 /* MovieDetail.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

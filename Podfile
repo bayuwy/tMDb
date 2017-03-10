@@ -13,11 +13,17 @@ target 'tMDb' do
   target 'tMDbTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'EVReflection/MoyaRxSwift'
+    pod 'Kingfisher', '~> 3.0'
+    pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
   end
 
   target 'tMDbUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'EVReflection/MoyaRxSwift'
+    pod 'Kingfisher', '~> 3.0'
+    pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
   end
 
 end

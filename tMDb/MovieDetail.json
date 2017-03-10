@@ -1,0 +1,63 @@
+{
+  "adult": false,
+  "backdrop_path": "/pGwChWiAY1bdoxL79sXmaFBlYJH.jpg",
+  "belongs_to_collection": null,
+  "budget": 190000000,
+  "genres": [
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 14,
+      "name": "Fantasy"
+    }
+  ],
+  "homepage": "http://kongskullislandmovie.com/",
+  "id": 293167,
+  "imdb_id": "tt3731562",
+  "original_language": "en",
+  "original_title": "Kong: Skull Island",
+  "overview": "Explore the mysterious and dangerous home of the king of the apes as a team of explorers ventures deep inside the treacherous, primordial island.",
+  "popularity": 20.646318,
+  "poster_path": "/aoUyphk4nwffrwlZRaOa0eijgpr.jpg",
+  "production_companies": [
+    {
+      "name": "Warner Bros.",
+      "id": 6194
+    },
+    {
+      "name": "Legendary Entertainment",
+      "id": 84419
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "2017-03-08",
+  "revenue": 0,
+  "runtime": 118,
+  "spoken_languages": [
+    {
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "All hail the king",
+  "title": "Kong: Skull Island",
+  "video": false,
+  "vote_average": 5.8,
+  "vote_count": 98
+}
