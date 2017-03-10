@@ -12,7 +12,7 @@ import EVReflection
 class Movie: EVObject {
 
     var posterPath: String?
-    var adult: Bool?
+    var adult: Bool = false
     var overview: String?
     var releaseDate: String?
     var genreIds: [Int] = []
@@ -21,8 +21,15 @@ class Movie: EVObject {
     var originalLanguage: String?
     var title: String?
     var backdropPath: String?
-    var popularity: Double?
-    var voteCount: Int?
-    var video: Bool?
-    var voteAverage: Double?
+    var popularity: Double = 0.0
+    var voteCount: Int = 0
+    var video: Bool = false
+    var voteAverage: Double = 0.0
+    
+    var posterUrl: String? {
+        if let posterPath = posterPath {
+            return "\(posterBaseUrl)\(posterPath)"
+        }
+        return nil
+    }
 }

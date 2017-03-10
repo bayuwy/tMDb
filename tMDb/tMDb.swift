@@ -10,6 +10,8 @@ import Foundation
 import RxSwift
 import Moya
 
+let goldenRation: CGFloat = 1.61803
+let posterBaseUrl = "https://image.tmdb.org/t/p/w500"
 let tMDbApiKey = "9548fa0910e2897f79dfdc19e0b2e9a0"
 
 let provider = RxMoyaProvider<tMDb>()
